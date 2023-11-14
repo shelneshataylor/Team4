@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theme Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Set the initial background color to Light Blue */
+        }
+
+        #color-theme-content {
+            text-align: center;
+            width: 300px;
+        }
+
+        #color-picker {
+            margin-bottom: 20px;
+        }
+
+        #apply-theme-btn {
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap's Primary Color */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Example chat boxes */
+        .chat-box {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="color-theme-content">
+        <h1>Choose Your Chat Background Color</h1>
+        
+        <!-- Color Picker -->
+        <input type="color" id="color-picker" value="#87CEEB"> <!-- Default color: Light Blue -->
+
+        <!-- Apply Theme Button -->
+        <button id="apply-theme-btn" onclick="applyChatTheme()">Apply Theme</button>
+    </div>
+
+    <div class="chat-box" id="voice-chat-box">
+        <p>Voice Chat</p>
+    </div>
+
+    <div class="chat-box" id="text-chat-box">
+        <p>Text Chat</p>
+    </div>
+
+    <div class="chat-box" id="speech-to-text-box">
+        <p>Speech-to-Text</p>
+    </div>
+
+    <script>
+        function applyChatTheme() {
+            var selectedColor = document.getElementById("color-picker").value;
+            
+            // Update the background color of the chat boxes
+            document.getElementById("voice-chat-box").style.backgroundColor = selectedColor;
+            document.getElementById("text-chat-box").style.backgroundColor = selectedColor;
+            document.getElementById("speech-to-text-box").style.backgroundColor = selectedColor;
+
+            alert("Chat background color applied!");
+        }
+    </script>
+
+</body>
+</html>
