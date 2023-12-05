@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theme Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Light Blue Background */
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #color-theme-content {
+            text-align: center;
+            width: 300px;
+        }
+
+        #color-picker {
+            margin-bottom: 20px;
+        }
+
+        #apply-theme-btn {
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap's Primary Color */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .chat-option {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff; /* Default background color */
+            color: #333;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            border: 5px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="color-theme-content">
+        <h1>Choose Your Chat Background Color</h1>
+        
+        <!-- Color Picker -->
+        <input type="color" id="color-picker" value="#87CEEB"> <!-- Default color: Light Blue -->
+
+        <!-- Apply Theme Button -->
+        <button id="apply-theme-btn">Apply Theme</button>
+    </div>
+
+    <a href="#" class="chat-option" id="voice-chat-box">
+        Voice Chat
+    </a>
+
+    <a href="#" class="chat-option" id="text-chat-box">
+        Text Chat
+    </a>
+
+    <a href="#" class="chat-option" id="speech-to-text-box">
+        Speech-to-Text
+    </a>
+    <button id="color-theme-dark-mode-toggle">Toggle Dark Mode</button>
+
+    <script src="darkModeToggle.js"></script>
+
+</body>
+</html>
